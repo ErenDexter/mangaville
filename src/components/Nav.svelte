@@ -16,7 +16,7 @@
 			>MV</a
 		>
 		<a href="/" class="lg:px-3">Home</a>
-		<a
+		<div
 			on:click={() => {
 				if (mounted)
 					window.location.href =
@@ -24,8 +24,10 @@
 							? '/recent'
 							: localStorage.getItem('recentLink');
 			}}
-			class="pr-1 cursor-pointer">Recent</a
+			class="pr-1 cursor-pointer"
 		>
+			Recent
+		</div>
 	</div>
 	<div class="pr-3 lg:pr-10">
 		<a
