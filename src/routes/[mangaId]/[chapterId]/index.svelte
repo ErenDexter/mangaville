@@ -25,6 +25,7 @@
 
 	onMount(() => {
 		localStorage.setItem('recentLink', window.location.pathname);
+		loadStuff();
 	});
 
 	onDestroy(() => {
@@ -40,50 +41,89 @@
 		} else clearInterval(interVal);
 	}
 
-	if ($store[mangaId] !== undefined) {
-		chapterInfo = [...$store[mangaId]];
-		chapterName = chapterInfo[chapterId - 1].chapterName;
-		chapterLink = chapterInfo[chapterId - 1].chapterLink;
-		id = chapterInfo[chapterId - 1].chapterId;
-
-		const newLink = chapterLink.replace(/\//g, ',');
-		axios
-			.get(`https://server-mv.herokuapp.com/chapter/${source}/${mangaId}/${newLink}`)
-			.then((res) => {
+	const loadStuff = async () => {
+		if ($store[mangaId]) {
+			console.log('Manga ID exists in store.');
+			chapterInfo = [...$store[mangaId]];
+			chapterName = chapterInfo[chapterId - 1].chapterName;
+			chapterLink = chapterInfo[chapterId - 1].chapterLink;
+			id = chapterInfo[chapterId - 1].chapterId;
+			const newLink = chapterLink.replace(/\//g, ',');
+			console.log('Loading chapters...');
+			console.log(`../mv-api/chapter/${source}/${mangaId}/${newLink}`);
+			try {
+				const res = await axios.get(`../mv-api/chapter/${source}/${mangaId}/${newLink}`);
 				chapter = res.data;
-			})
-			.catch((err) => {
-				console.log(err);
+				console.log(chapter);
+			} catch (error) {
+				console.log('Ooopss! Error occurred.');
+			}
+		} else {
+			console.log('Manga ID does not exist in store.');
+			const newLink = link.replace(/\//g, ',');
+			let res = await axios.get(`../mv-api/manga/${source}/${mangaId}/${newLink}`);
+			store.update((currentData) => {
+				return { [mangaId]: res.data.chapters.reverse(), ...currentData };
 			});
-	} else {
-		const newLink = link.replace(/\//g, ',');
-		axios
-			.get(`https://server-mv.herokuapp.com/manga/${source}/${mangaId}/${newLink}`)
-			.then((res) => {
-				store.update((currentData) => {
-					return { [mangaId]: res.data.chapters.reverse(), ...currentData };
-				});
-			})
-			.then(() => {
-				chapterInfo = [...$store[mangaId]];
-				chapterName = chapterInfo[chapterId - 1].chapterName;
-				chapterLink = chapterInfo[chapterId - 1].chapterLink;
-				id = chapterInfo[chapterId - 1].chapterId;
+			chapterInfo = [...$store[mangaId]];
+			chapterName = chapterInfo[chapterId - 1].chapterName;
+			chapterLink = chapterInfo[chapterId - 1].chapterLink;
+			id = chapterInfo[chapterId - 1].chapterId;
+			const newChapterLink = chapterLink.replace(/\//g, ',');
+			res = await axios.get(`../mv-api/chapter/${source}/${mangaId}/${newChapterLink}`);
+			chapter = res.data;
+		}
+	};
 
-				const newChapterLink = chapterLink.replace(/\//g, ',');
-				axios
-					.get(`https://server-mv.herokuapp.com/chapter/${source}/${mangaId}/${newChapterLink}`)
-					.then((res) => {
-						chapter = res.data;
-					})
-					.catch((err) => {
-						console.log(err);
-					});
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	}
+	// if ($store[mangaId] !== undefined) {
+	// 	chapterInfo = [...$store[mangaId]];
+	// 	chapterName = chapterInfo[chapterId - 1].chapterName;
+	// 	chapterLink = chapterInfo[chapterId - 1].chapterLink;
+	// 	id = chapterInfo[chapterId - 1].chapterId;
+
+	// 	const newLink = chapterLink.replace(/\//g, ',');
+	// 	axios
+	// 		.get(`../mv-api/chapter/${source}/${mangaId}/${newLink}`)
+	// 		.then((res) => {
+	// 			console.log('call 1 done!');
+	// 			chapter = res.data;
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log('call 1 error!');
+	// 			// console.log(err);
+	// 		});
+	// } else {
+	// 	const newLink = link.replace(/\//g, ',');
+	// 	console.log('not found in store.');
+	// 	axios
+	// 		.get(`../mv-api/manga/${source}/${mangaId}/${newLink}`)
+	// 		.then((res) => {
+	// 			console.log('call 2 done!');
+	// 			store.update((currentData) => {
+	// 				return { [mangaId]: res.data.chapters.reverse(), ...currentData };
+	// 			});
+	// 			chapterInfo = [...$store[mangaId]];
+	// 			chapterName = chapterInfo[chapterId - 1].chapterName;
+	// 			chapterLink = chapterInfo[chapterId - 1].chapterLink;
+	// 			id = chapterInfo[chapterId - 1].chapterId;
+
+	// 			const newChapterLink = chapterLink.replace(/\//g, ',');
+	// 			axios
+	// 				.get(`../mv-api/chapter/${source}/${mangaId}/${newChapterLink}`)
+	// 				.then((res) => {
+	// 					console.log('call 3 done!');
+	// 					chapter = res.data;
+	// 				})
+	// 				.catch((err) => {
+	// 					console.log('call 3 error!');
+	// 					console.log(err);
+	// 				});
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log('call 2 error!');
+	// 			// console.log(err);
+	// 		});
+	// }
 
 	let chapter = { title: '', images: [] };
 </script>

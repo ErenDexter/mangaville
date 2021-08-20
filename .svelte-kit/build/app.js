@@ -20,9 +20,9 @@ export function init(settings = default_settings) {
 		amp: false,
 		dev: false,
 		entry: {
-			file: "/./_app/start-4262e166.js",
+			file: "/./_app/start-cd1c115e.js",
 			css: ["/./_app/assets/start-8077b9bf.css"],
-			js: ["/./_app/start-4262e166.js","/./_app/chunks/vendor-81fef714.js"]
+			js: ["/./_app/start-cd1c115e.js","/./_app/chunks/vendor-76586ada.js"]
 		},
 		fetched: undefined,
 		floc: false,
@@ -56,7 +56,7 @@ const d = decodeURIComponent;
 const empty = () => ({});
 
 const manifest = {
-	assets: [{"file":"Boruto.jpg","size":99319,"type":"image/jpeg"},{"file":"cover.jpg","size":220749,"type":"image/jpeg"},{"file":"Dr.-Stone.jpg","size":341218,"type":"image/jpeg"},{"file":"favicon.png","size":16794,"type":"image/png"},{"file":"Jujutsu-Kaisen.jpg","size":191761,"type":"image/jpeg"},{"file":"One-Piece.jpg","size":307593,"type":"image/jpeg"},{"file":"One-Punch-Man.jpg","size":178537,"type":"image/jpeg"},{"file":"Tokyo-Ghoul.jpg","size":288997,"type":"image/jpeg"}],
+	assets: [{"file":"Boruto.jpg","size":99319,"type":"image/jpeg"},{"file":"Dr.-Stone.jpg","size":341218,"type":"image/jpeg"},{"file":"Jujutsu-Kaisen.jpg","size":191761,"type":"image/jpeg"},{"file":"One-Piece.jpg","size":307593,"type":"image/jpeg"},{"file":"One-Punch-Man.jpg","size":178537,"type":"image/jpeg"},{"file":"Tokyo-Ghoul.jpg","size":288997,"type":"image/jpeg"},{"file":"cover.jpg","size":220749,"type":"image/jpeg"},{"file":"favicon.png","size":16794,"type":"image/png"}],
 	layout: "src/routes/__layout.svelte",
 	error: ".svelte-kit/build/components/error.svelte",
 	routes: [
@@ -68,10 +68,29 @@ const manifest = {
 						b: [".svelte-kit/build/components/error.svelte"]
 					},
 		{
+						type: 'endpoint',
+						pattern: /^\/mv-api\/chapter\/([^/]+?)\/([^/]+?)\/([^/]+?)\/?$/,
+						params: (m) => ({ source: d(m[1]), manga: d(m[2]), link: d(m[3])}),
+						load: () => import("../../src/routes/mv-api/chapter/[source]/[manga]/[link].js")
+					},
+		{
+						type: 'endpoint',
+						pattern: /^\/mv-api\/manga\/([^/]+?)\/([^/]+?)\/([^/]+?)\/?$/,
+						params: (m) => ({ source: d(m[1]), manga: d(m[2]), link: d(m[3])}),
+						load: () => import("../../src/routes/mv-api/manga/[source]/[manga]/[link].js")
+					},
+		{
 						type: 'page',
 						pattern: /^\/recent\/?$/,
 						params: empty,
 						a: ["src/routes/__layout.svelte", "src/routes/recent.svelte"],
+						b: [".svelte-kit/build/components/error.svelte"]
+					},
+		{
+						type: 'page',
+						pattern: /^\/debug\/?$/,
+						params: empty,
+						a: ["src/routes/__layout.svelte", "src/routes/debug.svelte"],
 						b: [".svelte-kit/build/components/error.svelte"]
 					},
 		{
@@ -100,10 +119,10 @@ const get_hooks = hooks => ({
 });
 
 const module_lookup = {
-	"src/routes/__layout.svelte": () => import("..\\..\\src\\routes\\__layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components\\error.svelte"),"src/routes/index.svelte": () => import("..\\..\\src\\routes\\index.svelte"),"src/routes/recent.svelte": () => import("..\\..\\src\\routes\\recent.svelte"),"src/routes/[mangaId]/index.svelte": () => import("..\\..\\src\\routes\\[mangaId]\\index.svelte"),"src/routes/[mangaId]/[chapterId]/index.svelte": () => import("..\\..\\src\\routes\\[mangaId]\\[chapterId]\\index.svelte")
+	"src/routes/__layout.svelte": () => import("../../src/routes/__layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components/error.svelte"),"src/routes/index.svelte": () => import("../../src/routes/index.svelte"),"src/routes/recent.svelte": () => import("../../src/routes/recent.svelte"),"src/routes/debug.svelte": () => import("../../src/routes/debug.svelte"),"src/routes/[mangaId]/index.svelte": () => import("../../src/routes/[mangaId]/index.svelte"),"src/routes/[mangaId]/[chapterId]/index.svelte": () => import("../../src/routes/[mangaId]/[chapterId]/index.svelte")
 };
 
-const metadata_lookup = {"src/routes/__layout.svelte":{"entry":"/./_app/pages/__layout.svelte-db98bff5.js","css":["/./_app/assets/pages/__layout.svelte-b187108b.css"],"js":["/./_app/pages/__layout.svelte-db98bff5.js","/./_app/chunks/vendor-81fef714.js","/./_app/chunks/Footer-82a7d451.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"/./_app/error.svelte-02faf4d0.js","css":[],"js":["/./_app/error.svelte-02faf4d0.js","/./_app/chunks/vendor-81fef714.js"],"styles":[]},"src/routes/index.svelte":{"entry":"/./_app/pages/index.svelte-6e605e39.js","css":[],"js":["/./_app/pages/index.svelte-6e605e39.js","/./_app/chunks/vendor-81fef714.js","/./_app/chunks/db-84123f5e.js"],"styles":[]},"src/routes/recent.svelte":{"entry":"/./_app/pages/recent.svelte-a781df69.js","css":[],"js":["/./_app/pages/recent.svelte-a781df69.js","/./_app/chunks/vendor-81fef714.js","/./_app/chunks/Footer-82a7d451.js"],"styles":[]},"src/routes/[mangaId]/index.svelte":{"entry":"/./_app/pages/[mangaId]/index.svelte-f69f1b99.js","css":[],"js":["/./_app/pages/[mangaId]/index.svelte-f69f1b99.js","/./_app/chunks/vendor-81fef714.js","/./_app/chunks/stores-eea8dfe9.js","/./_app/chunks/db-84123f5e.js"],"styles":[]},"src/routes/[mangaId]/[chapterId]/index.svelte":{"entry":"/./_app/pages/[mangaId]/[chapterId]/index.svelte-9679b5de.js","css":["/./_app/assets/pages/[mangaId]/[chapterId]/index.svelte-e0cbf582.css"],"js":["/./_app/pages/[mangaId]/[chapterId]/index.svelte-9679b5de.js","/./_app/chunks/vendor-81fef714.js","/./_app/chunks/stores-eea8dfe9.js","/./_app/chunks/db-84123f5e.js"],"styles":[]}};
+const metadata_lookup = {"src/routes/__layout.svelte":{"entry":"/./_app/pages/__layout.svelte-6913bac4.js","css":["/./_app/assets/pages/__layout.svelte-b187108b.css"],"js":["/./_app/pages/__layout.svelte-6913bac4.js","/./_app/chunks/vendor-76586ada.js","/./_app/chunks/Footer-81559239.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"/./_app/error.svelte-cc67904c.js","css":[],"js":["/./_app/error.svelte-cc67904c.js","/./_app/chunks/vendor-76586ada.js"],"styles":[]},"src/routes/index.svelte":{"entry":"/./_app/pages/index.svelte-2a9f15c2.js","css":[],"js":["/./_app/pages/index.svelte-2a9f15c2.js","/./_app/chunks/vendor-76586ada.js","/./_app/chunks/db-78882d40.js"],"styles":[]},"src/routes/recent.svelte":{"entry":"/./_app/pages/recent.svelte-47806ff9.js","css":[],"js":["/./_app/pages/recent.svelte-47806ff9.js","/./_app/chunks/vendor-76586ada.js","/./_app/chunks/Footer-81559239.js"],"styles":[]},"src/routes/debug.svelte":{"entry":"/./_app/pages/debug.svelte-561d2339.js","css":[],"js":["/./_app/pages/debug.svelte-561d2339.js","/./_app/chunks/vendor-76586ada.js"],"styles":[]},"src/routes/[mangaId]/index.svelte":{"entry":"/./_app/pages/[mangaId]/index.svelte-2577d6b5.js","css":[],"js":["/./_app/pages/[mangaId]/index.svelte-2577d6b5.js","/./_app/chunks/vendor-76586ada.js","/./_app/chunks/stores-38c1737a.js","/./_app/chunks/db-78882d40.js"],"styles":[]},"src/routes/[mangaId]/[chapterId]/index.svelte":{"entry":"/./_app/pages/[mangaId]/[chapterId]/index.svelte-e7e578f7.js","css":["/./_app/assets/pages/[mangaId]/[chapterId]/index.svelte-e0cbf582.css"],"js":["/./_app/pages/[mangaId]/[chapterId]/index.svelte-e7e578f7.js","/./_app/chunks/vendor-76586ada.js","/./_app/chunks/stores-38c1737a.js","/./_app/chunks/db-78882d40.js"],"styles":[]}};
 
 async function load_component(file) {
 	return {

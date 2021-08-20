@@ -1,3 +1,9 @@
+<!-- <script context="module">
+	export const load = async ({fetch}) => {
+
+	}
+</script> -->
+
 <script>
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
@@ -16,8 +22,9 @@
 
 	onMount(() => {
 		const newLink = link.replace(/\//g, ',');
+		// mv-api/idkmanga/DrStone/https:,,dr-stone-online.com
 		axios
-			.get(`https://server-mv.herokuapp.com/manga/${source}/${mangaId}/${newLink}`)
+			.get(`mv-api/manga/${source}/${mangaId}/${newLink}`)
 			.then((res) => {
 				store.update((currentData) => {
 					return { [mangaId]: res.data.chapters.reverse(), ...currentData };
