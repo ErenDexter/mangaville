@@ -200,7 +200,7 @@ function init(settings = default_settings) {
 const d = decodeURIComponent;
 const empty = () => ({});
 const manifest = {
-  assets: [{ "file": "Boruto.jpg", "size": 99319, "type": "image/jpeg" }, { "file": "cover.jpg", "size": 823359, "type": "image/jpeg" }, { "file": "Dr.-Stone.jpg", "size": 341218, "type": "image/jpeg" }, { "file": "favicon.png", "size": 16794, "type": "image/png" }, { "file": "Jujutsu-Kaisen.jpg", "size": 191761, "type": "image/jpeg" }, { "file": "One-Piece.jpg", "size": 307593, "type": "image/jpeg" }, { "file": "One-Punch-Man.jpg", "size": 178537, "type": "image/jpeg" }, { "file": "Tokyo-Ghoul.jpg", "size": 288997, "type": "image/jpeg" }],
+  assets: [{ "file": "Boruto.jpg", "size": 99319, "type": "image/jpeg" }, { "file": "cover.jpg", "size": 220749, "type": "image/jpeg" }, { "file": "Dr.-Stone.jpg", "size": 341218, "type": "image/jpeg" }, { "file": "favicon.png", "size": 16794, "type": "image/png" }, { "file": "Jujutsu-Kaisen.jpg", "size": 191761, "type": "image/jpeg" }, { "file": "One-Piece.jpg", "size": 307593, "type": "image/jpeg" }, { "file": "One-Punch-Man.jpg", "size": 178537, "type": "image/jpeg" }, { "file": "Tokyo-Ghoul.jpg", "size": 288997, "type": "image/jpeg" }],
   layout: "src/routes/__layout.svelte",
   error: ".svelte-kit/build/components/error.svelte",
   routes: [

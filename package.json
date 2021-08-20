@@ -10,6 +10,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "next",
+		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.3.1",
 		"eslint": "^7.22.0",
