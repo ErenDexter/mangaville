@@ -36,7 +36,7 @@ const parseHtml = (source, html) => {
 export async function get({ params }) {
   let { source, manga, link } = params;
 
-  link = link.replaceAll(',', '/');
+  link = link.replace(/,/g, '/');
   const response = await fetch(link);
   const html = await response.text();
   const resData = parseHtml(source, html);
