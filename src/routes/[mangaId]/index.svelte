@@ -3,7 +3,6 @@
 
 	}
 </script> -->
-
 <script>
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
@@ -58,6 +57,15 @@
 
 <svelte:head>
 	<title>{title}</title>
+
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="MangaVille - Read {title}" />
+	<meta
+		property="og:description"
+		content="MangaVille is the largest village of most popular, latest & trending manga. You can read manga online in hd quality for completely free."
+	/>
+	<meta property="og:image" content="/{cover}" />
+	<meta property="og:site_name" content="MangaVille" />
 </svelte:head>
 <div
 	class="flex justify-center mx-auto w-full h-auto bg-center bg-cover bg-no-repeat px-2 "
@@ -75,7 +83,7 @@
 	<div>
 		<h2 class="text-2xl uppercase">{title}</h2>
 		<div class="text-sm text-primary font-medium uppercase">{duration}</div>
-		<div class="text-base font-light uppercase">{genre}</div>
+		<div class="text-sm uppercase">{genre}</div>
 		<div class="text-lg text-left font-light mt-5">
 			{description}
 		</div>

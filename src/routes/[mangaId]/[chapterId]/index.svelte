@@ -75,61 +75,20 @@
 		}
 	};
 
-	// if ($store[mangaId] !== undefined) {
-	// 	chapterInfo = [...$store[mangaId]];
-	// 	chapterName = chapterInfo[chapterId - 1].chapterName;
-	// 	chapterLink = chapterInfo[chapterId - 1].chapterLink;
-	// 	id = chapterInfo[chapterId - 1].chapterId;
-
-	// 	const newLink = chapterLink.replace(/\//g, ',');
-	// 	axios
-	// 		.get(`../mv-api/chapter/${source}/${mangaId}/${newLink}`)
-	// 		.then((res) => {
-	// 			console.log('call 1 done!');
-	// 			chapter = res.data;
-	// 		})
-	// 		.catch((err) => {
-	// 			console.log('call 1 error!');
-	// 			// console.log(err);
-	// 		});
-	// } else {
-	// 	const newLink = link.replace(/\//g, ',');
-	// 	console.log('not found in store.');
-	// 	axios
-	// 		.get(`../mv-api/manga/${source}/${mangaId}/${newLink}`)
-	// 		.then((res) => {
-	// 			console.log('call 2 done!');
-	// 			store.update((currentData) => {
-	// 				return { [mangaId]: res.data.chapters.reverse(), ...currentData };
-	// 			});
-	// 			chapterInfo = [...$store[mangaId]];
-	// 			chapterName = chapterInfo[chapterId - 1].chapterName;
-	// 			chapterLink = chapterInfo[chapterId - 1].chapterLink;
-	// 			id = chapterInfo[chapterId - 1].chapterId;
-
-	// 			const newChapterLink = chapterLink.replace(/\//g, ',');
-	// 			axios
-	// 				.get(`../mv-api/chapter/${source}/${mangaId}/${newChapterLink}`)
-	// 				.then((res) => {
-	// 					console.log('call 3 done!');
-	// 					chapter = res.data;
-	// 				})
-	// 				.catch((err) => {
-	// 					console.log('call 3 error!');
-	// 					console.log(err);
-	// 				});
-	// 		})
-	// 		.catch((err) => {
-	// 			console.log('call 2 error!');
-	// 			// console.log(err);
-	// 		});
-	// }
-
 	let chapter = { title: '', images: [] };
 </script>
 
 <svelte:head>
 	<title>Chapter {id} - {title}</title>
+
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="MangaVille - Read {title} Chapter {id}" />
+	<meta
+		property="og:description"
+		content="MangaVille is the largest village of most popular, latest & trending manga. You can read manga online in hd quality for completely free."
+	/>
+	<meta property="og:image" content="../../{cover}" />
+	<meta property="og:site_name" content="MangaVille" />
 </svelte:head>
 
 <div class="text-2xl mt-30 text-white">

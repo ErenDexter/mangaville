@@ -17,8 +17,8 @@
 				class="uppercase">Youtube</a
 			>
 		</div>
-		<div class="w-80 lg:w-96">
-			MangaVille (MangaVille.xyz) does not store any files on our server, we only linked to the
+		<div class="w-80 lg:w-96 text-justify">
+			MangaVille (mangaville.ninja) does not store any files on our server, we only linked to the
 			media which is hosted on other Websites.
 		</div>
 	</div>
