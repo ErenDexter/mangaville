@@ -47,7 +47,7 @@ let data = {
 			link: 'https://onepiece-manga-online.net/',
 			source: 'idkmanga'
 		},
-		{
+		/*{
 			title: 'Tokyo Ghoul',
 			duration: '2011 - 2014',
 			genre: 'Action, Drama, Supernatural, Horror, Mystery, Psychological, Seinen',
@@ -63,7 +63,7 @@ let data = {
 			cover: 'Tokyo-Ghoul.jpg',
 			link: 'https://tokyo-ghoul-new.com/',
 			source: 'idkmanga'
-		},
+		}, */
 		{
 			title: 'Dr. Stone',
 			duration: '2017 - On Going',

@@ -1,7 +1,6 @@
 const express = require('express');
 const request = require('request');
 const cheerio = require('cheerio');
-const fetch = require('node-fetch');
 const cors = require('cors');
 
 const mv = express();
