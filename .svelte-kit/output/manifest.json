@@ -1,6 +1,6 @@
 {
   ".svelte-kit/build/runtime/internal/start.js": {
-    "file": "start-491bfaa3.js",
+    "file": "start-a83a3f72.js",
     "src": ".svelte-kit/build/runtime/internal/start.js",
     "isEntry": true,
     "imports": [
@@ -20,16 +20,16 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-db98bff5.js",
+    "file": "pages/__layout.svelte-1bb92e4a.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81fef714.js",
-      "_Footer-82a7d451.js"
+      "_Footer-9b6f6b03.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-b187108b.css"
+      "assets/pages/__layout.svelte-e78aabea.css"
     ]
   },
   ".svelte-kit/build/components/error.svelte": {
@@ -42,23 +42,23 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-6e605e39.js",
+    "file": "pages/index.svelte-9d940ffb.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81fef714.js",
-      "_db-84123f5e.js"
+      "_db-b4ae5385.js"
     ]
   },
   "src/routes/recent.svelte": {
-    "file": "pages/recent.svelte-a781df69.js",
+    "file": "pages/recent.svelte-83b458b1.js",
     "src": "src/routes/recent.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81fef714.js",
-      "_Footer-82a7d451.js"
+      "_Footer-9b6f6b03.js"
     ]
   },
   "src/routes/debug.svelte": {
@@ -71,25 +71,25 @@
     ]
   },
   "src/routes/[mangaId]/index.svelte": {
-    "file": "pages/[mangaId]/index.svelte-2f65842e.js",
+    "file": "pages/[mangaId]/index.svelte-394e8cde.js",
     "src": "src/routes/[mangaId]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81fef714.js",
       "_stores-eea8dfe9.js",
-      "_db-84123f5e.js"
+      "_db-b4ae5385.js"
     ]
   },
   "src/routes/[mangaId]/[chapterId]/index.svelte": {
-    "file": "pages/[mangaId]/[chapterId]/index.svelte-60b85ce8.js",
+    "file": "pages/[mangaId]/[chapterId]/index.svelte-59019493.js",
     "src": "src/routes/[mangaId]/[chapterId]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81fef714.js",
       "_stores-eea8dfe9.js",
-      "_db-84123f5e.js"
+      "_db-b4ae5385.js"
     ],
     "css": [
       "assets/pages/[mangaId]/[chapterId]/index.svelte-e0cbf582.css"
@@ -98,14 +98,14 @@
   "_vendor-81fef714.js": {
     "file": "chunks/vendor-81fef714.js"
   },
-  "_Footer-82a7d451.js": {
-    "file": "chunks/Footer-82a7d451.js",
+  "_Footer-9b6f6b03.js": {
+    "file": "chunks/Footer-9b6f6b03.js",
     "imports": [
       "_vendor-81fef714.js"
     ]
   },
-  "_db-84123f5e.js": {
-    "file": "chunks/db-84123f5e.js",
+  "_db-b4ae5385.js": {
+    "file": "chunks/db-b4ae5385.js",
     "imports": [
       "_vendor-81fef714.js"
     ]
