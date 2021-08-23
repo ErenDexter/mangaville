@@ -1,15 +1,16 @@
 {
   ".svelte-kit/build/runtime/internal/start.js": {
-    "file": "start-a83a3f72.js",
+    "file": "start-108df306.js",
     "src": ".svelte-kit/build/runtime/internal/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-81fef714.js"
+      "_vendor-fa9d439c.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/build/components/error.svelte",
       "src/routes/index.svelte",
+      "src/routes/policy.svelte",
       "src/routes/recent.svelte",
       "src/routes/debug.svelte",
       "src/routes/[mangaId]/index.svelte",
@@ -20,100 +21,109 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-1bb92e4a.js",
+    "file": "pages/__layout.svelte-cd023362.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js",
-      "_Footer-9b6f6b03.js"
+      "_vendor-fa9d439c.js",
+      "_Footer-433a3eef.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-e78aabea.css"
+      "assets/pages/__layout.svelte-0bb98776.css"
     ]
   },
   ".svelte-kit/build/components/error.svelte": {
-    "file": "error.svelte-02faf4d0.js",
+    "file": "error.svelte-6ed6ace5.js",
     "src": ".svelte-kit/build/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js"
+      "_vendor-fa9d439c.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-9d940ffb.js",
+    "file": "pages/index.svelte-59330a75.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js",
-      "_db-b4ae5385.js"
+      "_vendor-fa9d439c.js",
+      "_db-05554f9e.js"
+    ]
+  },
+  "src/routes/policy.svelte": {
+    "file": "pages/policy.svelte-18ee6bf4.js",
+    "src": "src/routes/policy.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-fa9d439c.js"
     ]
   },
   "src/routes/recent.svelte": {
-    "file": "pages/recent.svelte-83b458b1.js",
+    "file": "pages/recent.svelte-b06a1a6b.js",
     "src": "src/routes/recent.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js",
-      "_Footer-9b6f6b03.js"
+      "_vendor-fa9d439c.js",
+      "_Footer-433a3eef.js"
     ]
   },
   "src/routes/debug.svelte": {
-    "file": "pages/debug.svelte-9feec32a.js",
+    "file": "pages/debug.svelte-2d49c42c.js",
     "src": "src/routes/debug.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js"
+      "_vendor-fa9d439c.js"
     ]
   },
   "src/routes/[mangaId]/index.svelte": {
-    "file": "pages/[mangaId]/index.svelte-394e8cde.js",
+    "file": "pages/[mangaId]/index.svelte-c2cb82fd.js",
     "src": "src/routes/[mangaId]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js",
-      "_stores-eea8dfe9.js",
-      "_db-b4ae5385.js"
+      "_vendor-fa9d439c.js",
+      "_stores-5e4a2e4f.js",
+      "_db-05554f9e.js"
     ]
   },
   "src/routes/[mangaId]/[chapterId]/index.svelte": {
-    "file": "pages/[mangaId]/[chapterId]/index.svelte-59019493.js",
+    "file": "pages/[mangaId]/[chapterId]/index.svelte-e89b4fe4.js",
     "src": "src/routes/[mangaId]/[chapterId]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-81fef714.js",
-      "_stores-eea8dfe9.js",
-      "_db-b4ae5385.js"
+      "_vendor-fa9d439c.js",
+      "_stores-5e4a2e4f.js",
+      "_db-05554f9e.js"
     ],
     "css": [
       "assets/pages/[mangaId]/[chapterId]/index.svelte-e0cbf582.css"
     ]
   },
-  "_vendor-81fef714.js": {
-    "file": "chunks/vendor-81fef714.js"
+  "_vendor-fa9d439c.js": {
+    "file": "chunks/vendor-fa9d439c.js"
   },
-  "_Footer-9b6f6b03.js": {
-    "file": "chunks/Footer-9b6f6b03.js",
+  "_Footer-433a3eef.js": {
+    "file": "chunks/Footer-433a3eef.js",
     "imports": [
-      "_vendor-81fef714.js"
+      "_vendor-fa9d439c.js"
     ]
   },
-  "_db-b4ae5385.js": {
-    "file": "chunks/db-b4ae5385.js",
+  "_db-05554f9e.js": {
+    "file": "chunks/db-05554f9e.js",
     "imports": [
-      "_vendor-81fef714.js"
+      "_vendor-fa9d439c.js"
     ]
   },
-  "_stores-eea8dfe9.js": {
-    "file": "chunks/stores-eea8dfe9.js",
+  "_stores-5e4a2e4f.js": {
+    "file": "chunks/stores-5e4a2e4f.js",
     "imports": [
-      "_vendor-81fef714.js"
+      "_vendor-fa9d439c.js"
     ]
   }
 }

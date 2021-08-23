@@ -96,13 +96,15 @@
 		class="flex justify-center mx-auto w-full h-auto bg-center bg-cover bg-no-repeat px-2"
 		style="background-image: url('../../{cover}'); "
 	>
-		<h1
-			class="my-72 text-3xl lg:text-6xl border-2 px-6 lg:py-4 py-3 font-medium text-white uppercase"
-			style="background-color: rgba(0, 0, 0, 0.6);"
+		<a href="/{title.split(' ').join('-')}" class="cursor-pointer"
+			><h1
+				class="cursor-pointer my-72 text-3xl lg:text-6xl border-2 px-6 lg:py-4 py-3 font-medium text-white uppercase"
+				style="background-color: rgba(0, 0, 0, 0.6);"
+			>
+				{title}<br />
+				<span class="text-xl lg:text-3xl flex justify-center mt-2 font-medium">Chapter {id}</span>
+			</h1></a
 		>
-			{title}<br />
-			<span class="text-xl lg:text-3xl flex justify-center mt-2 font-medium">Chapter {id}</span>
-		</h1>
 	</div>
 </div>
 {#if chapter.images.length > 0}

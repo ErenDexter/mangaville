@@ -8,13 +8,11 @@
 </script>
 
 <nav
-	class="flex w-full text-base font-normal z-50 items-center justify-center lg:justify-between text-white fixed uppercase"
+	class="flex w-full text-sm font-normal z-50 items-center justify-center lg:justify-between text-white fixed uppercase"
 	style="background-color: rgba(17, 24, 39, 0.8)"
 >
-	<div class="flex space-x-5 p-2.5 lg:pl-7 items-center">
-		<a href="/" class="text-3xl font-medium pr-5 lg:pr-7 border-r mr-1 border-white text-white"
-			>MV</a
-		>
+	<div class="flex space-x-7 p-2.5 lg:pl-7 items-center">
+		<a href="/" class="text-3xl font-bold pr-5 lg:pr-7 border-r mr-1 border-white text-white">MV</a>
 		<a href="/" class="lg:px-3">Home</a>
 		<div
 			on:click={() => {
@@ -24,7 +22,7 @@
 							? '/recent'
 							: localStorage.getItem('recentLink');
 			}}
-			class="pr-1 cursor-pointer"
+			class="pr-3 cursor-pointer"
 		>
 			Recent
 		</div>
