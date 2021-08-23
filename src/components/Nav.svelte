@@ -13,7 +13,7 @@
 >
 	<div class="flex space-x-7 p-2.5 lg:pl-7 items-center">
 		<a href="/" class="text-3xl font-bold pr-5 lg:pr-7 border-r mr-1 border-white text-white">MV</a>
-		<a href="/" class="lg:px-3">Home</a>
+		<a href="/" class="lg:px-3 hover:text-gray-500">Home</a>
 		<div
 			on:click={() => {
 				if (mounted)
@@ -22,14 +22,14 @@
 							? '/recent'
 							: localStorage.getItem('recentLink');
 			}}
-			class="pr-3 cursor-pointer"
+			class="pr-3 cursor-pointer hover:text-gray-500"
 		>
 			Recent
 		</div>
 	</div>
 	<div class="pr-3 lg:pr-10">
 		<a
-			class="lg:flex justify-center"
+			class="lg:flex justify-center hover:text-gray-500"
 			href="https://www.youtube.com/channel/UC4GLMq65Rt5FjJxRtFra1Cg"
 			target="_blank"><div>Youtube</div></a
 		>
