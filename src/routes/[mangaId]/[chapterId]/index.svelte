@@ -264,7 +264,7 @@
 			<div
 				id="list"
 				transition:slide
-				class="listScroll transition duration-300 ease-in-out text-white shadow-2xl mt-3 bg-gray-900 border border-white rounded-md flex items-center w-60 h-96 flex-col absolute  left-1/2 transform -translate-x-1/2 py-1 overflow-y-auto"
+				class="listScroll transition duration-300 ease-in-out text-white shadow-2xl mt-3 bg-gray-900 border border-white rounded-md flex items-center w-48 h-96 flex-col absolute  left-1/2 transform -translate-x-1/2 py-1 overflow-y-auto"
 			>
 				{#each chapterInfo as chapter, i}
 					<div
