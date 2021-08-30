@@ -69,7 +69,7 @@
 		style="background-image: url({cover}); "
 	>
 		<h1
-			class="my-72 text-3xl lg:text-6xl border-2 px-6 lg:py-4 py-3 font-medium text-white uppercase"
+			class="my-72 text-3xl lg:text-6xl border-2 px-6 lg:py-4 py-3 font-medium text-center text-white uppercase"
 			style="background-color: rgba(0, 0, 0, 0.6);"
 		>
 			{title}

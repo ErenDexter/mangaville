@@ -11,7 +11,7 @@
 	const { mangaId, chapterId } = $page.params;
 	const manga = mangaId.replace(/-/g, ' ');
 
-	const { title, cover, link, source } = $store.mangas.filter((el) => el.title === manga)[0];
+	const { title, cover, link, source, type } = $store.mangas.filter((el) => el.title === manga)[0];
 
 	let chapterInfo,
 		chapterName = '',
@@ -128,7 +128,7 @@
 		>
 			<a href="/{title.split(' ').join('-')}" class="cursor-pointer"
 				><h1
-					class="cursor-pointer my-72 text-3xl lg:text-6xl border-2 px-6 lg:py-4 py-3 font-medium text-white uppercase"
+					class="cursor-pointer my-72 text-3xl lg:text-6xl border-2 px-6 lg:py-4 py-3 text-center font-medium text-white uppercase"
 					style="background-color: rgba(0, 0, 0, 0.6);"
 				>
 					{title}<br />
@@ -285,7 +285,9 @@
 			<div class="flex flex-col items-center mt-8">
 				{#each chapter.images as image, i}
 					<img src={image} alt={chapterName} class="lg:w-1/2" />
-					<div class="my-2 text-white">{i + 1}/{chapter.images.length}</div>
+					{#if type !== 'manhwa'}
+						<div class="my-2 text-white">{i + 1}/{chapter.images.length}</div>
+					{/if}
 				{/each}
 			</div>
 

@@ -72,6 +72,39 @@ let data = {
 			cover: 'Dr.-Stone.jpg',
 			link: 'https://dr-stone-online.com/',
 			source: 'idkmanga'
+		},
+
+		{
+			title: 'That Time I Got Reincarnated as a Slime',
+			duration: '2014 - On Going',
+			genre: 'Adventure, Comedy, Fantasy',
+			description: `Tensei shitara Slime Datta Ken (Japanese: 転生したらスライムだった件 Hepburn: Tensei Shitara Suraimu Datta Ken) is a Japanese fantasy light novel series written by Fuse, and illustrated by Mitz Vah. It was serialized online between 2013 and 2016 on the user-generated novel publishing website Shōsetsuka ni Narō. It was acquired by Micro Magazine, who published the first light novel volume in 2014. Fifteen volumes have been released as of September 2019. The light novel has been licensed in North America by Yen Press.
+
+			Thirty-seven-year-old Satoru Mikami is a typical corporate worker, who is perfectly content with his monotonous lifestyle in Tokyo, other than failing to nail down a girlfriend even once throughout his life. In the midst of a casual encounter with his colleague, he falls victim to a random assailant on the streets and is stabbed. However, while succumbing to his injuries, a peculiar voice echoes in his mind, and recites a bunch of commands which the dying man cannot make sense of`,
+			cover: 'That-Time-I-Got-Reincarnated-as-a-Slime.jpg',
+			link: 'https://w11.tenseishitaraslimedattaken-manga.com/',
+			source: 'idkmanga'
+		},
+		{
+			title: 'Tokyo Revengers',
+			duration: '2017 - On Going',
+			genre: 'Action, Supernatural, Drama, School, Shounen',
+			description: `Tokyo Revengers (Japanese: 東京卍リベンジャーズ[a], Hepburn: Tōkyō Ribenjāzu) is a Japanese manga series written and illustrated by Ken Wakui. It has been serialized in Kodansha‘s Weekly Shōnen Magazine since March 2017. An anime television series adaptation by Liden Films premiered in April 2021. A live-action film adaptation is scheduled to be released in Japan in July 2021.`,
+			cover: 'Tokyo-Revengers.jpg',
+			link: 'https://oxmanga.com/',
+			source: 'idkmanga'
+		},
+		{
+			type: 'manhwa',
+			title: 'Solo Levelling',
+			duration: '2016 - On Going',
+			genre: 'Action, Adventure, Fantasy',
+			description: `Ten years ago, "the Gate" appeared and connected the real world with the realm of magic and monsters. To combat these vile beasts, ordinary people received superhuman powers and became known as "Hunters." Twenty-year-old Sung Jin-Woo is one such Hunter, but he is known as the "World's Weakest," owing to his pathetic power compared to even a measly E-Rank. Still, he hunts monsters tirelessly in low-rank Gates to pay for his mother's medical bills.
+
+			However, this miserable lifestyle changes when Jin-Woo—believing himself to be the only one left to die in a mission gone terribly wrong—awakens in a hospital three days later to find a mysterious screen floating in front of him. This "Quest Log" demands that Jin-Woo completes an unrealistic and intense training program, or face an appropriate penalty. Initially reluctant to comply because of the quest's rigor, Jin-Woo soon finds that it may just transform him into one of the world's most fearsome Hunters.`,
+			cover: 'Solo-Levelling.jpg',
+			link: 'https://solomanhwa.com/',
+			source: 'idkmanga'
 		}
 	]
 };
