@@ -31,6 +31,9 @@ export const routes = [
 	// src/routes/recent.svelte
 	[/^\/recent\/?$/, [c[0], c[5]], [c[1]]],
 
+	// src/routes/robots.txt
+	[/^\/robots\/?$/],
+
 	// src/routes/debug.svelte
 	[/^\/debug\/?$/, [c[0], c[6]], [c[1]]],
 
